@@ -1,6 +1,8 @@
 # Intro 
 This project manages a sandbox for [cassandra](https://cassandra.apache.org/)
 
+[![Build Status](https://travis-ci.org/opskeleton/cassandra-sandbox.png)](https://travis-ci.org/opskeleton/cassandra-sandbox)
+
 # Usage
 ```bash
   $ bundle install 
