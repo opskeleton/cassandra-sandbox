@@ -1,0 +1,29 @@
+FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    puppetlabs/apt (1.4.2)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/stdlib (4.1.0)
+
+GIT
+  remote: git://github.com/mstrauss/puppet-editfile.git
+  ref: master
+  sha: 884efdc0997af667f24625e696630e6b1db5a952
+  specs:
+    mstrauss/editfile (0.0.1)
+
+GIT
+  remote: git://github.com/narkisr/puppet-jdk.git
+  ref: master
+  sha: a9a2e8bcfdee2e17e8a2d1b7952084c1c4b37646
+  specs:
+    narkisr/jdk (0.0.1)
+      puppetlabs/apt (>= 0.0.3)
+      puppetlabs/stdlib (>= 2.0.0)
+
+DEPENDENCIES
+  mstrauss/editfile (>= 0)
+  narkisr/jdk (>= 0)
+  puppetlabs/apt (>= 0)
+  puppetlabs/stdlib (>= 0)
+

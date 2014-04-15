@@ -1,5 +1,5 @@
 # Intro 
-This project manages a sandbox for [cassandra](url)
+This project manages a sandbox for [cassandra](https://cassandra.apache.org/)
 
 # Usage
 ```bash
@@ -10,7 +10,7 @@ This project manages a sandbox for [cassandra](url)
 
 # Copyright and license
 
-Copyright [2014] [First Last Name]
+Copyright [2014] [Ronen Narkis]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
