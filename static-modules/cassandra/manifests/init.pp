@@ -20,14 +20,14 @@ class cassandra {
   } ->
 
   package{'dsc20':
-    ensure  => present
+    ensure  => present,
+    require   => Class['jdk']
   } ->
 
   service{'cassandra':
     ensure    => running,
     enable    => true,
     hasstatus => true,
-    require   => Class['jdk']
   }
 
 }

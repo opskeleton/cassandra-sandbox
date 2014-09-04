@@ -1,5 +1,15 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+
+update = <<SCRIPT
+if [ ! -f /tmp/up ]; then
+  sudo sed -i.bak s/us.archive/il.archive/g /etc/apt/sources.list
+  sudo aptitude update 
+  touch /tmp/up
+fi
+SCRIPT
+
+
 Vagrant.configure("2") do |config|
 
   bridge = ENV['VAGRANT_BRIDGE']
@@ -7,10 +17,11 @@ Vagrant.configure("2") do |config|
   env  = ENV['PUPPET_ENV']
   env ||= 'dev'
 
-  config.vm.box = 'ubuntu-13.10_puppet-3.4.3' 
+  config.vm.box = 'ubuntu-14.04_puppet-3.6.1' 
   config.vm.network :public_network, :bridge => bridge
   config.vm.hostname = 'cassandra.local'
 
+  config.vm.provision :shell, :inline => update
   config.vm.provider :virtualbox do |vb|
     vb.customize ['modifyvm', :id, '--memory', 2048, '--cpus', 2]
   end

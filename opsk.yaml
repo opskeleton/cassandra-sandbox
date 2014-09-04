@@ -1,0 +1,16 @@
+--- 
+  version: '0.0.1'
+  name: cassandra
+  includes: 
+    - Puppetfile
+    - modules
+    - manifests
+    - hieradata
+    - static-modules
+    - Gemfile
+    - Gemfile.lock
+    - opsk.yaml
+    - LICENSE-2.0.txt
+    - run.sh
+    - boot.sh
+
